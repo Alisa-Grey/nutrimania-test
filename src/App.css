@@ -1,0 +1,28 @@
+.wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #f2f3f7;
+}
+
+.main {
+  min-height: 90vh;
+}
+
+.button--outlined {
+  border-color: var(--green);
+}
+
+.button--outlined:disabled {
+  border-color: lightgray;
+}
+
+.button--primary {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--green);
+  color: #fff;
+  font-size: 18px;
+}

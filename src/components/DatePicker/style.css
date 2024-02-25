@@ -1,0 +1,74 @@
+.date-picker {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.button {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+.button > svg {
+  width: 14px;
+  height: 20px;
+  transition: fill 0.3s ease-in-out;
+}
+
+.button:disabled > svg {
+  fill: #d7d7d7;
+}
+
+.button:hover > svg {
+  fill: var(--grey-primary);
+}
+
+.date-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 280px;
+  padding: 14px;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.date-field::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../assets/calendar.svg');
+  transform: translateY(-50%);
+}
+
+@media screen and (min-width: 320px) {
+  .date-field {
+    width: 280px;
+    padding-left: 55px;
+  }
+
+  .date-field::before {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .date-field {
+    padding-left: 80px;
+  }
+  .date-field::before {
+    width: 40px;
+    height: 40px;
+  }
+}

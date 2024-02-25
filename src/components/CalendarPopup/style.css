@@ -1,0 +1,138 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(145, 145, 145, 0.6);
+  cursor: pointer;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  height: 750px;
+  padding: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: 1px solid var(--primary-grey);
+  background-color: #fff;
+}
+
+.calendar .title {
+  margin-bottom: 40px;
+}
+
+.calendar .button {
+  padding: 14px;
+}
+
+.calendar__header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto 20px;
+}
+
+.month-title {
+  font-weight: bolder;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.table {
+  margin: 0 auto;
+  border-color: transparent;
+  margin-bottom: 20px;
+}
+
+.table-head__cell {
+  color: #d7d7df;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+td {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.table__cell {
+  position: relative;
+  color: #575757;
+  text-align: center;
+}
+
+.color {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  left: 50%;
+  width: 30px;
+  height: 4px;
+  transform: translate(-50%, -50%);
+}
+
+.color.green {
+  background-color: var(--green);
+}
+
+.color.yellow {
+  background-color: #ffc700;
+}
+
+.color.grey {
+  background-color: #9f9f9f;
+}
+
+.color.default {
+  background-color: var(--primary-grey);
+  opacity: 0.5;
+}
+
+.weekend {
+  color: #bc201f;
+}
+
+.active {
+  border-color: var(--green);
+}
+
+@media screen and (min-width: 320px) {
+  .calendar {
+    width: 100%;
+    height: 600px;
+    padding: 20px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .calendar {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .calendar {
+    width: 40%;
+    height: 750px;
+    padding: 50px;
+  }
+
+  th,
+  td {
+    padding: 20px;
+  }
+}
